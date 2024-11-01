@@ -74,6 +74,7 @@ header {
 	justify-content: space-between;
 	background-color: #8374f3;
 	position: fixed;
+	z-index: 10;
 
 }
 
@@ -212,6 +213,9 @@ section {
     margin-right: 30px;
 
 }
+.principal{
+	margin-top: 150px;
+}
 
 section h1{
 	font-family: 'Playfair Display', serif;
@@ -221,16 +225,35 @@ section h1{
 	
 }
 .principal .conteudo{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	background-color: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    max-width: 900px;
+    margin: 40 auto;
+    border-radius: 10px; 
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+	z-index: 1;
+}
+
+.principal h1{
+	font-size: 80px;
+    color: #4a4a8f; 
+    margin-bottom: 30px;
+	letter-spacing: 2px;
+	text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.principal p{
+	font-size: 20px;
+    color: #333;
+    line-height: 1.8;
 	text-align: justify;
-	padding: 30px;
-	font-size: 30px;
-	background-color: rgba(255,255,255, 0.5);
-	border-radius: 5px;
-	width: 90%;
-	
+	font-family: 'Arial', sans-serif;
+}
+
+
+.principal p strong{
+	color: #4a4a8f;
 }
 
 
