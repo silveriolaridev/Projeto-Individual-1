@@ -12,7 +12,7 @@ header {
 	justify-content: space-between;
 	background-color: #8374f3;
 	position: fixed;
-	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.7);
+	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
 
 }
 
@@ -139,7 +139,7 @@ nav {
 
 
 footer{
-	background-color: #b0a3c5;
+	background-color: #8864c4;
 	padding: 20px 0;
 	width: 100%;
 	align-items: center;
@@ -147,10 +147,6 @@ footer{
 	justify-content: center;
 }
 
-footer span{
-	color: white;
-	font-size: 12px;
-}
 
 
 section {
@@ -235,10 +231,10 @@ section h1{
 	z-index: 1;
 }
 
-.principal h1{
+ h1{
 	font-size: 80px;
     color: #4a4a8f; 
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 	letter-spacing: 2px;
 	text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -281,18 +277,9 @@ video {
 	border-radius: 5px;
 	width: 90%;
 	border: solid 1px black;
-	margin-left: 26px;
+
 }
 
-.div-principal{
-	display: flex;
-	flex-direction: row;
-	gap: 20px;
-	background-color: rgba(228, 146, 146, 0.5);
-	padding: 30px;
-	border-radius: 10px;
-	width: 50%;
-}
 
 .div-principal p{
 	text-align: justify;
@@ -301,17 +288,58 @@ video {
 
 .div-pai{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+	padding: 40px;
+	background-color: #f5f5f5;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	max-width: 1150px;
+	margin: 30px auto;
+}
+
+
+.div-img, .div-principal{
+	background-color: #d5c9f3;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+  
+}
+
+.container{
+	display: flex;
 	gap: 20px;
 }
 
-.div-img{
-	display: flex;
-	flex-direction: row;
-	gap: 20px;
-	background-color: rgba(228, 146, 146, 0.5);
-	padding: 30px;
-	border-radius: 10px;
-	align-items: center;
-	margin-left: 25px;
+.lista{
+	list-style-position: inside;
+	text-align: justify;
+	padding: 20px;
+	line-height: 30px;
 }
+
+.footer-content{
+	display: flex;
+    color: #ffffff; 
+	gap:10px;
+    font-size: cover;
+    text-align: center;
+    position: relative;
+	font-size: 15px;
+
+}
+
+.icon{
+ width: 20px;
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon:hover{
+    transform: rotate(15deg);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+}
+
