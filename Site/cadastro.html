@@ -3,9 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <img class="logo" src="./img/logo.png" alt="Soul Tune Logo">
+        <span class="span-entrar">
+        <a  class="entrarlink" href="login.html">Voltar</a></span>
+    </header>
+    <div class="video-fundo">
+      <video autoplay muted loop class="video">
+          <source src="./mp4/videomain.mp4" type="video/mp4">
+       
+      </video>
+    <div class="container-login">
+      <div class="card login">
+        <div class="formulario">
+          <h1>Cadastro</h1>
+          <div class="campo">
+            <span class="tituloInput">Nome:</span>
+            <div class="input-container">
+              <i class="fas fa-user"></i>
+              <input type="text" id="ipt_login" placeholder="Digite seu usuário" />
+            </div>
+          </div>
     
+          <div class="campo">
+            <span class="tituloInput">Email:</span>
+            <div class="input-container">
+              <i class="fas fa-envelope"></i>
+              <input type="password" class="senha" id="ipt_senha_login" placeholder="Digite sua senha" />
+            </div>
+          </div>
+
+          <div class="campo">
+            <span class="tituloInput">Senha:</span>
+            <div class="input-container">
+              <i class="fas fa-lock"></i>
+              <input type="password" class="senha" id="ipt_senha_login" placeholder="Digite sua senha" />
+            </div>
+          </div>
+
+          <div class="campo">
+            <span class="tituloInput">Confirmar senha:</span>
+            <div class="input-container">
+              <i class="fas fa-lock"></i>
+              <input type="password" class="senha" id="ipt_senha_login" placeholder="Digite sua senha" />
+            </div>
+          </div>
+    
+          <div class="botoes-login">
+            <a class="button" onclick="cadastrar()">Cadastro</a>
+            <a class="button" href="index.html">Voltar</a>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
 </html>

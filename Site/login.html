@@ -11,34 +11,40 @@
 <body>
     <header>
         <img class="logo" src="./img/logo.png" alt="Soul Tune Logo">
-       
-        <a  class="entrarlink" href="login.html"></a>
+        <span class="span-entrar">
+        <a  class="entrarlink" href="login.html">Voltar</a></span>
     </header>
-
+    <div class="video-fundo">
+      <video autoplay muted loop class="video">
+          <source src="./mp4/videomain.mp4" type="video/mp4">
+       
+      </video>
     <div class="container-login">
-        <div class="card login">
-          <div class="formulario">
-            <h1>Entrar</h1>
-            <div class="campo">
-    
-              <span>Usuário:</span>
-              <div class="input-container"><i class="fas fa-user"></i>
-    
-                <input type="text" id="ipt_login" placeholder="Digite seu usuário" />
-              </div>
-            </div>
-    
-            <div class="campo">
-              <span>Senha:</span>
-              <div class="input-container"><i class="fas fa-lock"></i>
-                <input type="password" class="senha" id="ipt_senha_login" placeholder="Digite sua senha" />
-                <a class="button" onclick="logar()">Entrar</a>
-          <a class="button" href="cadastro.html">Não tem cadastro?</a>
-              </div>
+      <div class="card login">
+        <div class="formulario">
+          <h1>Entrar</h1>
+          <div class="campo">
+            <span class="tituloInput">Usuário:</span>
+            <div class="input-container">
+              <i class="fas fa-user"></i>
+              <input type="text" id="ipt_login" placeholder="Digite seu usuário" />
             </div>
           </div>
-          
+    
+          <div class="campo">
+            <span class="tituloInput">Senha:</span>
+            <div class="input-container">
+              <i class="fas fa-lock"></i>
+              <input type="password" class="senha" id="ipt_senha_login" placeholder="Digite sua senha" />
+            </div>
+          </div>
+    
+          <div class="botoes-login">
+            <a class="button" onclick="logar()">Entrar</a>
+            <a class="button" href="cadastro.html">Não tem cadastro?</a>
+          </div>
         </div>
       </div>
+    </div>
 </body>
 </html>
