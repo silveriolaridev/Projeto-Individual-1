@@ -11,7 +11,7 @@ header {
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
-	background-color: #8374f3;
+	background-color:  #5A3D9E !important; 
 	position: fixed;
 	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
 
@@ -45,6 +45,10 @@ a:hover{
 	color: #e4c2f1;
 }
 
+main h1{
+	font-family: 'Playfair Display';
+}
+
 nav {
     display: flex;
     padding: 0px;
@@ -56,16 +60,16 @@ nav {
 }
 
 footer{
-	background-color: #b0a3c5;
+	background-color: rgb(230, 220, 255) !important;
 	padding: 20px 0;
 	width: 100%;
+	color: #333;
 	align-items: center;
 	display: flex;
 	justify-content: center;
 }
 
 footer span{
-	color: white;
 	font-size: 12px;
 }
 
@@ -78,6 +82,7 @@ header {
 	z-index: 10;
 
 }
+
 
 body{
     background-image: url("../img/backgroud.png");
@@ -100,9 +105,10 @@ a{
 	transition: color 0.3s ease;
 }
 
-a:hover{
-	color: #e4c2f1;
-}
+
+nav a:hover {
+	color: #D196F8; 
+  }
 
 nav {
     display: flex;
@@ -123,8 +129,9 @@ nav {
 	border: 1px solid #fff;
 	padding: 15px;
 	height: 10px;
-	transition: all 0.3s ease;
+	transition: all 0.3s ease-in-out;
 	border-radius: 5px;
+	background-color: #6a4ad9;
 }
 
 .entrarlink:hover{
@@ -154,7 +161,6 @@ section {
     border-radius: 10px;
 	margin-top: 50px;
 	margin-bottom: 150px;
-	background-color: rgb(rgb(255, 255, 255),);
 }
 
 .container-login{
@@ -168,7 +174,7 @@ section {
 .card{
 	display: flex;
 	justify-content: center;
-	background-color: #ffffff;
+	background-color: rgb(255, 255, 255, 0.9);
 	align-items: center;
     width: 400px;
     padding: 30px 20px;
@@ -225,7 +231,6 @@ section {
 }
 
 section h1{
-	font-family: 'Playfair Display', serif;
 	font-size: 70px;
 	margin-bottom: 90px;
 	text-align: center;
@@ -275,18 +280,22 @@ section h1{
 .button {
     cursor: pointer;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     font-size: 1rem;
     color: #fff;
-    background: linear-gradient(135deg, #8e44ad, #c39bd3);
-    padding: 10px;
+	background: linear-gradient(135deg, #A364F1, #D196F8);    
+	padding: 10px;
     width: 80%;
     font-weight: bold;
     text-decoration: none;
     margin: 10px 0;
-    transition: background 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 15px rgba(142, 68, 173, 0.4);
 }
+
+.button:hover {
+	transform: scale(1.05);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  }
 
 
 .principal p strong{
@@ -328,6 +337,7 @@ video {
 }
 
 .div-pai{
+	align-items: center;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -342,10 +352,10 @@ video {
 
 
 .div-img, .div-principal{
-	background-color: #d5c9f3;
+	background-color: #E6E6FA;
   padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(49, 3, 87, 0.1);
   width: 100%;
   text-align: center;
   
@@ -360,12 +370,13 @@ video {
 	list-style-position: inside;
 	text-align: justify;
 	padding: 20px;
+	margin-bottom: 10px;
 	line-height: 30px;
 }
 
 .footer-content{
 	display: flex;
-    color: #ffffff; 
+    color: black; 
 	gap:10px;
     font-size: cover;
     text-align: center;
@@ -384,3 +395,56 @@ video {
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
 }
 
+.sobre-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 60px 20px;
+	background-color: #f3f2fc; 
+	color: #333; 
+  }
+  
+  .sobre-content {
+	max-width: 600px;
+	padding: 20px;
+  }
+  
+ 
+  h2 {
+	font-size: 35px;
+	color: #4B2C8C; 
+	margin-bottom: 20px;
+  }
+  
+  .sobre-content p {
+	font-size: 18px;
+	line-height: 1.6;
+	margin-bottom: 20px;
+  }
+  
+  .btn-saiba {
+	display: inline-block;
+	padding: 12px 25px;
+	background-color: #6a4ad9; 
+	color: #fff;
+	font-size: 1em;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 8px;
+	transition: background-color 0.3s ease;
+  }
+  
+  .btn-saiba:hover {
+	background-color: #5A3D9E;
+  }
+  
+  .sobre-image {
+	max-width: 400px;
+	margin-left: 30px;
+  }
+  
+  .sobre-image img {
+	width: 100%;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
