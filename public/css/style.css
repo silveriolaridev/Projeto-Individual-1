@@ -181,6 +181,10 @@ section {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
+.cadastro{
+	margin-top:90px;
+}
+
 .formulario{
     display: flex;
     height: 90%;
@@ -320,6 +324,16 @@ video {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.videocadastro{
+	position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh;
+    object-fit: cover; 
+    
 }
 
 .img-cantando{
