@@ -21,14 +21,19 @@
       </video>
       <section>
     <div class="container-login">
+      <div class="alerta_erro">
+        <div class="card_erro" id="cardErro">
+          <span id="mensagem_erro"></span>
+        </div>
+      </div>
       <div class="card login">
         <div class="formulario">
           <h1>Entrar</h1>
           <div class="campo">
-            <span class="tituloInput">Usuário:</span>
+            <span class="tituloInput">Email:</span>
             <div class="input-container">
-              <i class="fas fa-user"></i>
-              <input type="text" id="ipt_login" placeholder="Digite seu usuário" />
+              <i class="fas fa-envelope"></i>
+              <input type="text" id="email_input" placeholder="usuario@email.com" />
             </div>
           </div>
     
@@ -36,17 +41,17 @@
             <span class="tituloInput">Senha:</span>
             <div class="input-container">
               <i class="fas fa-lock"></i>
-              <input type="password" class="senha" id="ipt_senha_login" placeholder="Digite sua senha" />
+              <input type="password" class="senha" id="senha_input" placeholder="********" />
             </div>
           </div>
     
           <div class="botoes-login">
-            <a class="button" onclick="logar()">Entrar</a>
+            <a class="button" onclick="entrar()">Entrar</a>
             <a class="button" href="cadastro.html">Não tem cadastro?</a>
           </div>
         </div>
       </div>
     </div>
-
+<script src="./js/login.js"></script>
 </body>
 </html>

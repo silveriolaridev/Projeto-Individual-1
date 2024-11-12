@@ -18,16 +18,17 @@
       <video autoplay muted loop class="video">
           <source src="./mp4/videomain.mp4" type="video/mp4">
       </video>
-    
+      
     <div class="container-login cadastro ">
       <div class="card ">
+  
         <div class="formulario">
           <h1>Cadastro</h1>
           <div class="campo">
             <span class="tituloInput">Nome:</span>
             <div class="input-container">
               <i class="fas fa-user"></i>
-              <input type="text" id="ipt_login" placeholder="Digite seu usuário" />
+              <input type="text" id="nome_input" placeholder="Digite seu usuário" />
             </div>
           </div>
     
@@ -35,7 +36,7 @@
             <span class="tituloInput">Email:</span>
             <div class="input-container">
               <i class="fas fa-envelope"></i>
-              <input type="text" id="ipt_email" placeholder="Digite seu email" />
+              <input type="text" id="email_input" placeholder="Digite seu email" />
             </div>
           </div>
 
@@ -43,7 +44,7 @@
             <span class="tituloInput">Senha:</span>
             <div class="input-container">
               <i class="fas fa-lock"></i>
-              <input type="password" id="ipt_senha_cadastro" placeholder="Digite sua senha" />
+              <input type="password" id="senha_input" placeholder="Digite sua senha" />
             </div>
           </div>
 
@@ -51,16 +52,22 @@
             <span class="tituloInput">Confirmar senha:</span>
             <div class="input-container">
               <i class="fas fa-lock"></i>
-              <input type="password" class="senha" id="ipt_repetir_senha" placeholder="Digite sua senha" />
+              <input type="password" class="senha" id="confirmacao_senha_input" placeholder="Digite sua senha" />
+            </div>
+          </div>
+          <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+              <span id="mensagem_erro"></span>
             </div>
           </div>
     
           <div class="botoes-login">
             <a class="button" onclick="cadastrar()">Cadastrar</a>
+           
           </div>
         </div>
       </div>
     </div>
-
+<script src="./js/cadastro.js"></script>
 </body>
 </html>

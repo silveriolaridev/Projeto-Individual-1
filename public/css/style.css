@@ -16,6 +16,10 @@ header {
 	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
 
 }
+html{
+	scroll-behavior: smooth;
+
+}
 
 body{
     background-image: url("../img/background.png");
@@ -24,6 +28,7 @@ body{
     margin: 0;
     padding: 0;
     min-height: 100vh;
+	transition: all 3s ease-in-out;
 }
 
 .logo {
@@ -460,4 +465,27 @@ video {
 	width: 100%;
 	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .alerta_erro{
+	display: flex;
+	justify-content:end;
+  }
+  
+  .card_erro {
+	display: none;
+	background-color: #fff;
+	color: black;
+	width: 230px;
+	position: relative;
+	border-radius: 15px;
+	border: #4B2C8C 3px solid;
+	padding: 10px;
+	margin-right: 10%;
+	margin-bottom: 5px;
+  }
+  
+  .card_erro #mensagem_erro{
+	font-weight: 500;
+	font-size: 20px;
   }
