@@ -257,7 +257,7 @@ section h1{
 	background-color: rgba(255, 255, 255, 0.8); 
     padding: 20px;
     max-width: 900px;
-    margin-top: 100px;
+    margin-bottom: 70px;
     border-radius: 10px; 
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
@@ -489,3 +489,40 @@ video {
 	font-weight: 500;
 	font-size: 20px;
   }
+
+
+.form-container {
+	max-width: 600px;
+	margin: auto;
+}
+
+.form {
+    background-color: white;
+        width: 35vw;
+        padding: 15px;
+        padding-top: 0%;
+        text-align: center;
+        border-radius: 20px;
+		margin-top: 70px;
+   
+}
+
+
+fieldset{
+    border: 3px solid #6a4ad9;
+    border-radius: 10px;
+	padding: 20px;
+
+}
+legend{
+    border: 1px solid #6a4ad9;
+    padding:10px;
+    background-color: #6a4ad9;
+    border-radius: 10px;
+    color: white
+}
+.form h2{
+	margin: 0;
+	color: #fff;
+	text-align: center;
+}

@@ -4,8 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+
 </head>
 <body>
-    <div class="formulario"></div>
+    <div class="form-container">
+        <form id="formularioCanto" class="form">
+            <fieldset><legend>
+            <h2>Experiência Musical</h2></legend>
+            <div class="question" id="pergunta1">
+                <label>1. Você já participou de aulas de canto?</label><br>
+                <input type="radio" name="aulas" value="sim"> Sim<br>
+                <input type="radio" name="aulas" value="nao"> Não<br>
+            </div>
+
+            <div>
+                <label>2. Qual o seu nível de experiência em canto?</label><br>
+                <input type="radio" name="nivel" value="iniciante"> Iniciante<br>
+                <input type="radio" name="nivel" value="intermediario"> Intermediário<br>
+                <input type="radio" name="nivel" value="avancado"> Avançado<br>
+            </div>
+ 
+            <div>
+                <label>3. Com que frequência você pratica canto?</label><br>
+                <input type="radio" name="frequencia" value="diariamente"> Diariamente<br>
+                <input type="radio" name="frequencia" value="semanalmente"> Semanalmente<br>
+                <input type="radio" name="frequencia" value="mensalmente"> Mensalmente<br>
+                <input type="radio" name="frequencia" value="ocasionalmente"> Ocasionalmente<br>
+            </div>
+
+            <div>
+                <label>4. Você já se apresentou publicamente cantando?</label><br>
+                <input type="radio" name="apresentacao" value="sim"> Sim<br>
+                <input type="radio" name="apresentacao" value="nao"> Não<br>
+            </div>
+
+            <div>
+                <label>5. Você já compôs suas próprias músicas?</label><br>
+                <input type="radio" name="composicao" value="sim"> Sim<br>
+                <input type="radio" name="composicao" value="nao"> Não<br>
+            </div>
+
+            <div>
+                <label>6. Qual estilo de música você mais gosta de cantar?</label><br>
+                <input type="radio" name="estilo" value="pop"> Pop<br>
+                <input type="radio" name="estilo" value="classico"> Clássico<br>
+                <input type="radio" name="estilo" value="mpb"> MPB<br>
+                <input type="radio" name="estilo" value="rock"> Rock<br>
+                <input type="radio" name="estilo" value="jazz"> Jazz<br>
+                <input type="radio" name="estilo" value="sertanejo"> Sertanejo<br>
+                <input type="radio" name="estilo" value="kpop">Kpop<br>
+                <button type="submit">Enviar</button>
+            </div></fieldset>
+        </form>
+    </div>
+
 </body>
 </html>
