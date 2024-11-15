@@ -1,80 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoulTune</title>
     <link rel="icon" href="./img/logo.png">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="./js/beneficios.js"></script>
 </head>
+
 <body>
     <header>
         <img class="logo" src="./img/logo.png" alt="Soul Tune Logo">
         <nav>
-			<a href="#principal">Home</a>
-            <a href="#beneficios" >Benefícios do Canto</a>
-            <a href="#sobre" >Sobre</a>
-		</nav>
+            <a href="#principal">Home</a>
+            <a href="#beneficios">Benefícios do Canto</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
         <span class="span-entrar">
-        <a  class="entrarlink" href="login.html">Entrar</a> </span>
+            <a class="entrarlink" href="login.html"><i class="fas fa-sign-in-alt"></i>Entrar </a> </span>
     </header>
-<main>
-    <div class="video-fundo">
-    <video autoplay muted loop class="video">
-        <source src="./mp4/videomain.mp4" type="video/mp4">
-     
-    </video>
-    <section class="principal" id="principal">
-        <div class="conteudo">
-        <h1>Descubra como o canto melhora a vida!</h1>
-        <p>A <strong>música</strong> tem o poder de <strong>transformar</strong> nossa vida, trazendo <strong>leveza</strong>, 
-            <strong>conexão</strong> e <strong>bem-estar</strong>. Descubra como o canto pode fortalecer sua 
-            <strong>autoconfiança</strong>, reduzir o <strong>estresse</strong> e elevar o espírito. Mergulhe em um universo onde cada 
-            nota traz mais <strong>harmonia</strong> ao nosso dia a dia.</p></div>
+    <main>
+        <div class="video-fundo">
+            <video autoplay muted loop class="video">
+                <source src="./mp4/videomain.mp4" type="video/mp4">
 
-        
+            </video>
+            <section class="principal" id="principal">
+                <div class="conteudo">
+                    <h1>Descubra como o canto melhora a vida!</h1>
+                    <p>A <strong>música</strong> tem o poder de <strong>transformar</strong> nossa vida, trazendo
+                        <strong>leveza</strong>,
+                        <strong>conexão</strong> e <strong>bem-estar</strong>. Descubra como o canto pode fortalecer sua
+                        <strong>autoconfiança</strong>, reduzir o <strong>estresse</strong> e elevar o espírito.
+                        Mergulhe em um universo onde cada
+                        nota traz mais <strong>harmonia</strong> ao nosso dia a dia.
+                    </p>
+                </div>
+
+
+            </section>
+        </div>
+    </main>
+    <section id="beneficios" class="Beneficios">
+
+        <div class="div-pai">
+            <h2>Conheça os benefícios do canto</h2>
+            <div class="container">
+                <div class="div-principal">
+                    <ul class="lista">
+                        <li onclick="saibaMais(this)">
+                            <span>Redução do Estresse</span>
+                            <p class="descricao">Cantar ajuda a liberar tensões e proporciona um relaxamento mental,
+                                aliviando os efeitos do estresse.</p>
+                        </li>
+                        <li onclick="saibaMais(this)">
+                            <span>Redução da Ansiedade</span>
+                            <p class="descricao">O canto pode acalmar a mente, reduzindo pensamentos acelerados e
+                                promovendo a serenidade.</p>
+                        </li>
+                        <li onclick="saibaMais(this)">
+                            <span>Melhora do Humor</span>
+                            <p class="descricao">A prática do canto libera endorfina e dopamina, neurotransmissores que
+                                melhoram o humor e a sensação de felicidade.</p>
+                        </li>
+                        <li onclick="saibaMais(this)">
+                            <span>Fortalecimento do Sistema Imunológico</span>
+                            <p class="descricao">Cantar regularmente pode aumentar a imunidade ao reduzir os níveis de
+                                cortisol, o hormônio do estresse.</p>
+                        </li>
+                        <li onclick="saibaMais(this)">
+                            <span>Melhora na Comunicação</span>
+                            <p class="descricao">Ao cantar, você desenvolve habilidades de articulação e projeção de
+                                voz, melhorando sua comunicação geral.</p>
+                        </li>
+                        <li onclick="saibaMais(this)">
+                            <span>Aumenta a Autoconfiança</span>
+                            <p class="descricao">Aprender a usar sua voz aumenta a confiança em si mesmo e em suas
+                                habilidades.</p>
+                        </li>
+                        <li onclick="saibaMais(this)">
+                            <span>Forma de Expressão Emocional</span>
+                            <p class="descricao">O canto permite que você expresse emoções de forma profunda e
+                                autêntica.</p>
+                        </li>
+                    </ul>
+
+                    </ul>
+                </div>
+                <div class="div-principal">
+                    <ul class="lista">
+                        <li onclick="saibaMais(this)">
+                            <span>Melhora da Memória</span>
+                            <p class="descricao">A memorização de letras e melodias é um excelente exercício para o
+                                cérebro.</p>
+                        </li>
+                        <li onclick="saibaMais(this)">
+                            <span>Fortalecimento da Coordenação Motora</span>
+                            <p class="descricao">Cantar e seguir ritmos fortalece a coordenação motora e a
+                                sincronização.</p>
+                        </li>
+                        <li onclick="saibaMais(this)">
+                            <span>Estímulo à Criatividade</span>
+                            <p class="descricao">A prática do canto estimula a criatividade ao explorar diferentes tons,
+                                ritmos e dinâmicas.</p>
+                        </li>
+                        <li onclick="saibaMais(this)">
+                            <span>Facilita a Socialização</span>
+                            <p class="descricao">O canto em grupo cria conexões entre as pessoas, incentivando a
+                                interação social.</p>
+                        </li>
+                        <li onclick="saibaMais(this)">
+                            <span>Melhora de Habilidades Cognitivas</span>
+                            <p class="descricao">A música tem efeitos positivos na saúde cognitiva, reduzindo o risco de
+                                declínio mental.</p>
+                        </li>
+                        <li onclick="saibaMais(this)">
+                            <span>Cria Sentimento de Pertencimento</span>
+                            <p class="descricao">Participar de atividades musicais cria um sentimento de pertencimento e
+                                comunidade.</p>
+                        </li>
+                        <li onclick="saibaMais(this)">
+                            <span>Aprimoramento de Idiomas</span>
+                            <p class="descricao">Cantar músicas em outros idiomas facilita o aprendizado de novas
+                                línguas ao estimular a pronúncia e o vocabulário.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div><a href="login.html" class="btn-saiba" onclick="saibaMais()">Saiba mais!</a>
+        </div>
     </section>
-    </div>
-</main>
-<section id="beneficios" class="Beneficios">
-   
-    <div class="div-pai">
-        <h2>Conheça os benefícios do canto</h2>
-        <div class="container">
-        <div class="div-principal">
-        <ul class="lista">
-        <li>Redução do estresse</li>
-        <li>Redução da ansiedade</li>
-        <li>Melhora do humor</li>
-        <li>Fortalecimento do Sistema Imunológico</li>
-        <li>Melhora comunicação</li>
-        <li>Aumenta autoconfiança</li>
-        <li>Forma de expressão emocional</li>
-    </ul></p> <a href="" class="btn-saiba" onclick="saibarMais()">Saiba mais!</a></div>
-     <div class="div-img">
-
-     <img class="img-cantando" src="./img/cantando.png" alt="Mulheres cantando"> </div></div></div>
-</section>
-<section id="sobre" class="sobre-container">
-    <div class="sobre-content">
-      <h2>O canto na minha vida</h2>
-      <p>Para mim, cantar é mais do que apenas emitir sons: é uma forma de expressão autêntica, que me permite explorar e comunicar emoções de uma maneira única. Cantar me conecta a mim mesma, ajuda a aliviar o estresse e me proporciona uma sensação profunda de bem-estar.</p>
-      <p>Canto desde criança, e percebo o impacto que isso teve na minha confiança e na forma como me relaciono com o mundo ao meu redor. O canto é meu refúgio e também minha fonte de energia e inspiração.</p>
-      <p>Karaokês e espaços de música se tornaram minha segunda casa, lugares onde posso ser eu mesma, me sentir livre e compartilhar minha voz.</p>
-      <p>Com o SoulTune quero inspirar outras pessoas a descobrirem o poder transformador do canto e a importância de encontrar uma voz interior que ressoe seus sentimentos e aspirações.</p>
-    </div>
-    <div class="sobre-image">
-      <img src="./img/cantando2.jpeg" alt="Cantando com violão">
-    </div>
-  </section>
-<footer>
-    <div class="footer-content">
-        <p>Developed with </p>
-        <div class="img-footer">
-        <img src="img/java-script.png" class="icon">
-        <img src="img/html.png" class="icon">
-        <img src="img/css.png" class="icon"></div>
-        <p> by Larissa Silvério</p>
-</footer>
+    <section id="sobre" class="sobre-container">
+        <div class="sobre-content">
+            <h2>O canto na minha vida</h2>
+            <p>Para mim, cantar é mais do que apenas emitir sons: é uma forma de expressão autêntica, que me permite
+                explorar e comunicar emoções de uma maneira única. Cantar me conecta a mim mesma, ajuda a aliviar o
+                estresse e me proporciona uma sensação profunda de bem-estar.</p>
+            <p>Canto desde criança, e percebo o impacto que isso teve na minha confiança e na forma como me relaciono
+                com o mundo ao meu redor. O canto é meu refúgio e também minha fonte de energia e inspiração.</p>
+            <p>Karaokês e espaços de música se tornaram minha segunda casa, lugares onde posso ser eu mesma, me sentir
+                livre e compartilhar minha voz.</p>
+            <p>Com o SoulTune quero inspirar outras pessoas a descobrirem o poder transformador do canto e a importância
+                de encontrar uma voz interior que ressoe seus sentimentos e aspirações.</p>
+        </div>
+        <div class="sobre-image">
+            <img src="./img/cantando2.jpeg" alt="Cantando com violão">
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <p>Developed with </p>
+            <div class="img-footer">
+                <img src="img/java-script.png" class="icon">
+                <img src="img/html.png" class="icon">
+                <img src="img/css.png" class="icon">
+            </div>
+            <p> by Larissa Silvério</p>
+    </footer>
 </body>
+
 </html>
