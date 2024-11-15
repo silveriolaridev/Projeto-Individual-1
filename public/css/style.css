@@ -224,7 +224,13 @@ section {
 	font-size: 1.2em;
 }
 
+.input-container input::placeholder{
+	text-align: center;
+	margin-left: 30px;
+}
+
 .input-container input {
+	margin-top: 10px;
 	padding: 10px 10px 10px 35px;
 	width: 100%;
 	border-radius: 8px;
