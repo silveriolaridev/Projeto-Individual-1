@@ -10,6 +10,20 @@ function validarSessao() {
     } else {
         window.location = "../login.html";
     }
+
+
+    const tempoAtual = new Date().getHours();
+    var saudacao = document.getElementById("saudacao")
+
+    if (tempoAtual < 12) {
+        saudacao.innerHTML = "Bom dia,";
+      } else if (tempoAtual < 18) {
+        saudacao.innerHTML = "Boa tarde,";
+      } else {
+        saudacao.innerHTML = "Boa noite,";
+      }
+
+
 }
 
 function limparSessao() {
