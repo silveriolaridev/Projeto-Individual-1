@@ -1,3 +1,4 @@
+
 const perguntas = [
     {
         pergunta: "Qual é o seu ambiente ideal para relaxar?",
@@ -50,6 +51,14 @@ const perguntas = [
         pontuacao: ['A', 'B', 'C', 'D']
     }
 ];
+
+const estilosMusicais = {
+    energetico: "Estilos energéticos como Pop, Kpop, Eletrônica ou Funk.",
+    tranquilo: "Estilos tranquilos como Clássica, Jazz ou Lo-Fi.",
+    criativo: "Estilos criativos como Indie ou MPB.",
+    unico: "Estilos únicos como Rock Alternativo ou Trap."
+};
+
 
 let pontuacao = {
     A: 0,
@@ -111,18 +120,31 @@ function mostrarResultado() {
 
     switch (estiloMusical) {
         case "A":
-            resultado = "Estilos energéticos como Pop, Kpop, Eletrônica ou Funk.";
+            resultado = estilosMusicais.energetico;
             break;
         case "B":
-            resultado = "Estilos tranquilos como Clássica, Jazz ou Lo-Fi.";
+            resultado = estilosMusicais.tranquilo;
             break;
         case "C":
-            resultado = "Estilos criativos como Indie ou MPB.";
+            resultado = estilosMusicais.criativo;
             break;
         case "D":
-            resultado = "Estilos únicos como Rock Alternativo ou Trap.";
+            resultado = estilosMusicais.unico;
             break;
     }
+
+    fetch(`/quiz/${sessionStorage.ID_USUARIO}/${resultado}`, { method: "POST", cache: 'no-store' }).then(function (response) {
+        if (response.ok) {
+            response.json().then(function (resposta) {
+                console.log(`Resultado inserido com sucesso!`);
+            });
+        } else {
+            console.error('Nenhum dado encontrado ou erro na API');
+        }
+    })
+    .catch(function (error) {
+        console.error(`Erro na inserção do resultado: ${error}`);
+    });
 
 
     document.getElementById('quiz-content').innerHTML = `
