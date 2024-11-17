@@ -51,14 +51,6 @@ const perguntas = [
     }
 ];
 
-const estilosMusicais = {
-    maioriaA: "Estilos energéticos como Pop, Kpop, Eletrônica ou Funk.",
-    maioriaB: "Estilos tranquilos como Clássica, Jazz ou Lo-Fi.",
-    maioriaC: "Estilos criativos como Indie ou MPB.",
-    maioriaD: "Estilos únicos como Rock Alternativo ou Trap."
-};
-
-
 let pontuacao = {
     A: 0,
     B: 0,
@@ -119,16 +111,16 @@ function mostrarResultado() {
 
     switch (estiloMusical) {
         case "A":
-            resultado = estilosMusicais.maioriaA;
+            resultado = "Estilos energéticos como Pop, Kpop, Eletrônica ou Funk.";
             break;
         case "B":
-            resultado = estilosMusicais.maioriaB;
+            resultado = "Estilos tranquilos como Clássica, Jazz ou Lo-Fi.";
             break;
         case "C":
-            resultado = estilosMusicais.maioriaC;
+            resultado = "Estilos criativos como Indie ou MPB.";
             break;
         case "D":
-            resultado = estilosMusicais.maioriaD;
+            resultado = "Estilos únicos como Rock Alternativo ou Trap.";
             break;
     }
 
