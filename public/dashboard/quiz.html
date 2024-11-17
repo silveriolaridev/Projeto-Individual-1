@@ -6,26 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/icon/notas_musicais.png">
     <link rel="stylesheet" href="../css/painel.css">
-    <script src="./js/quiz.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="../js/quiz.js"></script>
     <title>SoulTune - Quiz</title>
 </head>
 
 <body>
     <div  class="lateral">
+
         <img class="logo" src="../assets/img/logo.png" alt="Soul Tune Logo">
     
-      
-            <a href="">Quiz</a>
-            <a href="">Dashboard</a>
-            
+      <nav>
+            <a href="./quiz.html"><i class="fas fa-question-circle"></i>Quiz</a>
+            <a href=""><i class="fas fa-chart-bar"></i> Dashboard</a>
+            <a href="" class="sair"><i class="fas fa-arrow-left"></i>Sair</a>
+        </nav>
         </div>
     <div class="quiz">
-        <h1>Descubra seu Estilo Musical!</h1>
+        <h1>Descubra os Estilos Musicais que combinam com você!</h1>
+
+        <div class="quiz-content">
         <div id="botao-iniciar-quiz" class="button-start">
             <button onclick="iniciarQuiz()">Iniciar Quiz</button>
         </div>
         <div id="quiz-content"></div>
-
+    </div>
     </div>
 </body>
 
