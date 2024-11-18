@@ -133,9 +133,13 @@ function mostrarResultado() {
             break;
     }
 
-    fetch(`/quiz/${sessionStorage.ID_USUARIO}/${resultado}`, { method: "POST", cache: 'no-store' }).then(function (response) {
-        if (response.ok) {
-            response.json().then(function (resposta) {
+    fetch(`/quiz/gravarResultado/`, { method: "POST", headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({
+        resultadoServer: resultado,
+        usuarioServer: sessionStorage.ID_USUARIO
+    })}).then(function (resposta) {
+        if (resposta.ok) {
+            resposta.json().then(function (resposta) {
                 console.log(`Resultado inserido com sucesso!`);
             });
         } else {

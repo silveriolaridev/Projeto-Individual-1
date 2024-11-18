@@ -9,10 +9,10 @@ function buscarResultadoQuiz(id_usuario, idQuiz) {
     return database.executar(instrucaoSql);
 }
 
-function inserirBD(idQuiz, resultadoQuiz, id_usuario) {
+function inserirBD(resultadoQuiz, id_usuario) {
 
-    var instrucaoSql = `INSERT INTO quiz (idQuiz, resultado, fkUsuario) VALUES
-    (${idQuiz, resultadoQuiz, id_usuario})`
+    var instrucaoSql = `INSERT INTO quiz (resultado, fkUsuario) VALUES
+    ('${resultadoQuiz}', ${id_usuario})`
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);

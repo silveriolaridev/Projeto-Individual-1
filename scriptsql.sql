@@ -15,6 +15,8 @@ CREATE TABLE quiz (
     fkUsuario INT NOT NULL,
     FOREIGN KEY (fkUsuario) REFERENCES usuario(id_usuario)
 );
+alter table quiz modify column resultado varchar(250);
+select * from quiz;
 
 
 

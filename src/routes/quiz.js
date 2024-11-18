@@ -7,7 +7,7 @@ router.get("/:idQuiz/:id_usuario", function (req, res) {
     quizController.buscarResultadoQuiz(req, res);
 });
 
-router.get("/:idQuiz/:resultadoQuiz/:id_usuario", function (req, res) {
+router.post("/gravarResultado", function (req, res) {
     quizController.inserirBD(req, res);
 })
 

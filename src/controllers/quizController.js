@@ -23,13 +23,12 @@ function buscarResultadoQuiz(req, res) {
 
 function inserirBD(req, res) {
 
-    var id_usuario = req.params.id_usuario;
-    var idQuiz = req.params.idQuiz;
-    var resultadoQuiz = req.params.id_usuario;
+    var id_usuario = req.body.usuarioServer;
+    var resultadoQuiz = req.body.resultadoServer;
 
     console.log(`Recuperando resultado em tempo real`);
 
-    quizModel.inserirBD(id_usuario, idQuiz, resultadoQuiz).then(function (resultado) {
+    quizModel.inserirBD(resultadoQuiz, id_usuario).then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {
