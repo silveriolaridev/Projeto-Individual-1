@@ -6,10 +6,12 @@
     <link rel="stylesheet" href="../css/painel.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="../js/sessao.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="icon" href="./assets/icon/notas_musicais.png">
     <title>SoulTune</title>
 </head>
-<body onload="validarSessao()">
+<body onload="validarSessao(), obterDados()"></body>
     <div  class="lateral">
 
         <img class="logo" src="../assets/img/logo.png" alt="Soul Tune Logo">
@@ -21,11 +23,13 @@
             <a href="./quiz.html"><i class="fas fa-question-circle"></i>Quiz</a>
             <a href="./dashboard.html"><i class="fas fa-chart-bar"></i> Dashboard</a>
             <a href=""><i class="fas fa-music"></i>Explorar Estilos</a>
-            <a href="../index.html" class="sair"><i class="fas fa-arrow-left"></i>Sair</a>
+            <a href="../index.html" class="sair" onclick="limparSessao()"><i class="fas fa-arrow-left"></i>Sair</a>
         </nav>
         </div>
         <div  class="container-painel">
             <h1>Dashboard</h1>
+
+            <canvas id="graficoBarra"></canvas>
         </div>
 </body>
 </html>
