@@ -11,24 +11,21 @@ select * from usuario;
 
 CREATE TABLE quiz (
     idQuiz INT AUTO_INCREMENT PRIMARY KEY,
-    resultado VARCHAR(45),
+    resultado VARCHAR(250),
     fkUsuario INT NOT NULL,
     FOREIGN KEY (fkUsuario) REFERENCES usuario(id_usuario)
 );
-alter table quiz modify column resultado varchar(250);
-select * from quiz;
 
-SELECT count(resultado) as Quantidade,
+SELECT 
 CASE 
 WHEN resultado LIKE '%Kpop%' THEN 'Energético'
 WHEN resultado LIKE '%Jazz%' THEN 'Tranquilo'
 WHEN resultado LIKE '%Indie%' THEN 'Criativo'
 WHEN resultado LIKE '%Rock%' THEN 'Único'
 ELSE 'Sem resultado'
-END AS resultados
+END AS resultados, count(resultado) as Quantidade
 from quiz
 group by resultado;
-
 
 
 

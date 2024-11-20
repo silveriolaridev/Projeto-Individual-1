@@ -22,7 +22,7 @@ function plotarGrafico(resposta) {
   console.log('iniciando plotagem do gráfico...');
 
   // Criando estrutura para plotar gráfico - labels
-  let labels = [];
+  let labels = ["Energético", "Tranquilo", "Criativo", "Único"];
 
   // Criando estrutura para plotar gráfico - dados
   let dados = {
@@ -62,14 +62,35 @@ function plotarGrafico(resposta) {
   console.log(resposta)
 
   // Inserindo valores recebidos em estrutura para plotar o gráfico
-  for (i = 0; i < resposta.length; i++) {
-      var registro = resposta[i];
-      console.log("Registro: " + registro.resultados)
-      labels.push(registro.resultados);
-      console.log(labels[i]);
-      dados.datasets[i].data.push(registro.Quantidade);
-      console.log(registro.Quantidade);
+  // for (i = 0; i < resposta.length; i++) {
+  //     var registro = resposta[i];
+  //     console.log("Registro: " + registro.resultados)
+  //     labels.push(registro.resultados);
+  //     console.log(labels);
+
+  //     if(labels[i] == 'Energético'){
+  //       dados.datasets[i].data.push(registro.Quantidade);
+  //     } else if (labels[i] == 'Tranquilo'){
+  //       dados.datasets[i].data.push(registro.Quantidade);
+  //     } else if (labels[i] == 'Criativo'){
+  //       dados.datasets[i].data.push(registro.Quantidade);
+  //     } else {
+  //       dados.datasets[i].data.push(registro.Quantidade);
+  //     }
+    
+  //     console.log(registro.Quantidade);
+  // }
+
+  for (var i = 0; i < resposta.length; i++) {
+    var dadoAtual = resposta[i];
+    var labelIndex = labels.indexOf(dadoAtual.resultados); 
+ 
+    dados.datasets[labelIndex].data[labelIndex] = dadoAtual.Quantidade; 
+   
   }
+
+  console.log("Dados finais para plotagem:");
+  console.log(dados);
 
   console.log('----------------------------------------------')
   console.log('O gráfico será plotado com os respectivos valores:')

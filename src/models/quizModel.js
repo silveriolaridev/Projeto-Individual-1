@@ -10,14 +10,14 @@ function buscarResultadoQuiz(id_usuario, idQuiz) {
 }
 function quantidadeResultados() {
 
-var instrucaoSql = `SELECT count(resultado) as Quantidade,
+var instrucaoSql = `SELECT 
 CASE 
 WHEN resultado LIKE '%Kpop%' THEN 'Energético'
 WHEN resultado LIKE '%Jazz%' THEN 'Tranquilo'
 WHEN resultado LIKE '%Indie%' THEN 'Criativo'
 WHEN resultado LIKE '%Rock%' THEN 'Único'
 ELSE 'Sem resultado'
-END AS resultados
+END AS resultados, count(resultado) as Quantidade
 from quiz
 group by resultado;`
 
