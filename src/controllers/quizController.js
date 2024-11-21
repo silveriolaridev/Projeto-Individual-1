@@ -1,24 +1,6 @@
 var quizModel = require("../models/quizModel");
 
-function buscarResultadoQuiz(req, res) {
 
-    
-    var idQuiz = req.params.idQuiz;
-    var id_usuario = req.params.id_usuario;
-
-
-    quizModel.buscarResultadoQuiz(id_usuario, idQuiz ).then(function (resultado) {
-        if (resultado.length > 0) {
-            res.status(200).json(resultado);
-        } else {
-            res.status(204).send("Nenhum resultado encontrado!")
-        }
-    }).catch(function (erro) {
-        console.log(erro);
-        console.log("Houve um erro ao buscar o resultado do quiz.", erro.sqlMessage);
-        res.status(500).json(erro.sqlMessage);
-    });
-}
 
 function quantidadeResultados(req, res) {
 
@@ -56,8 +38,55 @@ function inserirBD(req, res) {
     });
 }
 
+function kpiQuantidadeResultados(req, res){
+    quizModel.kpiQuantidadeResultados().then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado[0]);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar o resultado do quiz.", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function kpiMaiorIndice(req, res){
+    quizModel.kpiMaiorIndice().then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado[0]);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar o resultado do quiz.", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function kpiUltimoResultado(req, res){
+
+    var id_usuario = req.params.id_usuario;
+    console.log('Id do usuario:=======================================', id_usuario)
+    quizModel.kpiUltimoResultado(id_usuario).then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado[0]);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar o resultado do quiz.", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
 module.exports = {
-    buscarResultadoQuiz,
     inserirBD,
-    quantidadeResultados
+    quantidadeResultados,
+    kpiQuantidadeResultados,
+    kpiMaiorIndice,
+    kpiUltimoResultado
 }

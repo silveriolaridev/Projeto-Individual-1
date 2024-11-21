@@ -1,13 +1,5 @@
 var database = require("../database/config");
 
-function buscarResultadoQuiz(id_usuario, idQuiz) {
-
-    var instrucaoSql = `SELECT resultado from quiz 
-    WHERE fkUsuario = ${id_usuario} AND idQuiz = ${idQuiz}`
-
-    console.log("Executando a instrução SQL: \n" + instrucaoSql);
-    return database.executar(instrucaoSql);
-}
 function quantidadeResultados() {
 
 var instrucaoSql = `SELECT 
@@ -34,8 +26,58 @@ function inserirBD(resultadoQuiz, id_usuario) {
     return database.executar(instrucaoSql);
 }
 
+function kpiQuantidadeResultados(){
+    var instrucaoSql = `
+    SELECT count(resultado) AS resultado FROM quiz;
+`
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+function kpiMaiorIndice(){
+    var instrucaoSql = `
+      SELECT 
+    CASE 
+        WHEN resultado LIKE '%Kpop%' THEN 'Energético'
+        WHEN resultado LIKE '%Jazz%' THEN 'Tranquilo'
+        WHEN resultado LIKE '%Indie%' THEN 'Criativo'
+        WHEN resultado LIKE '%Rock%' THEN 'Único'
+        ELSE 'Sem resultado'
+        END AS resultadoNome,
+        count(resultado) AS quantidadeResultado
+            FROM quiz
+            group by resultadoNome order by quantidadeResultado desc limit 1;
+`
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+
+function kpiUltimoResultado(id_usuario){
+    var instrucaoSql = `
+   SELECT 
+    CASE 
+        WHEN resultado LIKE '%Kpop%' THEN 'Energético'
+        WHEN resultado LIKE '%Jazz%' THEN 'Tranquilo'
+        WHEN resultado LIKE '%Indie%' THEN 'Criativo'
+        WHEN resultado LIKE '%Rock%' THEN 'Único'
+        ELSE 'Sem resultado'
+        END AS resultadoNome
+            FROM quiz
+            where fkUsuario = ${id_usuario}
+            order by dataHora desc limit 1
+`
+
+  console.log("Executando a instrução SQL: \n" + instrucaoSql);
+  return database.executar(instrucaoSql);
+}
+
 module.exports = {
-    buscarResultadoQuiz,
     inserirBD,
-    quantidadeResultados
+    quantidadeResultados,
+    kpiQuantidadeResultados,
+    kpiMaiorIndice,
+    kpiUltimoResultado
 }
