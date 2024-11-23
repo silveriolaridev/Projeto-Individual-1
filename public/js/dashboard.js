@@ -26,35 +26,37 @@ function plotarGrafico(resposta) {
 
   // Criando estrutura para plotar gráfico - dados
   let dados = {
-      labels: labels,
-      datasets: [{
-          label: 'Energético',
-          data: [],
-          fill: false,
-          borderColor: 'rgb(75, 192, 192)',
-          tension: 0.1
+    labels: labels,
+    datasets: [
+      {
+        label: 'Energético',
+        data: [],
+        backgroundColor: 'rgba(208, 94, 168, 0.8)', // Rosa forte translúcido
+        borderColor: 'rgba(208, 94, 168, 1)', // Rosa forte sólido
+        borderWidth: 1
       },
       {
-          label: 'Tranquilo',
-          data: [],
-          fill: false,
-          borderColor: 'rgb(199, 52, 52)',
-          tension: 0.1
+        label: 'Tranquilo',
+        data: [],
+        backgroundColor: 'rgba(102, 153, 255, 0.8)', // Azul claro translúcido
+        borderColor: 'rgba(102, 153, 255, 1)', // Azul sólido
+        borderWidth: 1
       },
       {
         label: 'Criativo',
         data: [],
-        fill: false,
-        borderColor: 'rgb(199, 52, 52)',
-        tension: 0.1
-    },
-    {
+        backgroundColor: 'rgba(102, 204, 178, 0.8)', // Verde esmeralda translúcido
+        borderColor: 'rgba(102, 204, 178, 1)', // Verde sólido
+        borderWidth: 1
+      },
+      {
         label: 'Único',
         data: [],
-        fill: false,
-        borderColor: 'rgb(199, 52, 52)',
-        tension: 0.1
-    }]
+        backgroundColor: 'rgba(255, 223, 128, 0.8)', // Amarelo pastel translúcido
+        borderColor: 'rgba(255, 223, 128, 1)', // Amarelo sólido
+        borderWidth: 1
+      }
+    ]
   };
 
   console.log('----------------------------------------------')
@@ -80,13 +82,57 @@ function plotarGrafico(resposta) {
   console.log(dados.datasets)
   console.log('----------------------------------------------')
 
-  // Criando estrutura para plotar gráfico - config
   const config = {
-      type: 'bar',
-      data: dados,
+    type: 'bar',
+    data: dados,
+    options: {
+      plugins: {
+        legend: {
+          labels: {
+            color: '#FFFFFF', 
+            font: {
+              size: 14, 
+            },
+          },
+        },
+        title: {
+          display: true, 
+          text: 'Índice de Resultados Gerais',
+          color: '#FFFFFF',
+          font: {
+            size: 25, 
+            weight: 'bold', 
+          },
+          padding: {
+            top: 10,
+            bottom: 20,
+          },
+        },
+      },
+      scales: {
+        x: {
+          ticks: {
+            color: '#FFFFFF', 
+            font: {
+              size: 16, 
+            },
+          },
+        },
+        y: {
+          ticks: {
+            color: '#FFFFFF',
+            font: {
+              size: 14, 
+            },
+          },
+          grid: {
+            color: 'rgba(255, 255, 255, 0.2)', 
+          },
+        },
+      },
+    },
   };
 
-  // Adicionando gráfico criado em div na tela
   let myChart = new Chart(
       document.getElementById(`graficoBarra`),
       config
@@ -103,7 +149,7 @@ function kpiQuantidadeResultadosNoPainel(){
       response.json().then(function (resposta) {
         console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
         
-        kpi_qtd.innerHTML = `Quantidade total de resultados: ${resposta.resultado}`
+        kpi_qtd.innerHTML = `<p class="indicador">Total de resultados:</p> <b class="resultado">${resposta.resultado}</b>`
 
       });
     } else {
@@ -122,7 +168,7 @@ function kpiMaiorIndiceNoPainel(){
       response.json().then(function (resposta) {
         console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
         
-        kpi_maior.innerHTML = `Estilo com mais resultados: ${resposta.resultadoNome}`
+        kpi_maior.innerHTML = `<p class="indicador">Estilo com mais resultados:</p> <b class="resultado">${resposta.resultadoNome}</b>`
 
       });
     } else {
@@ -142,7 +188,7 @@ function kpiUltimoResultadoNoPainel(){
       response.json().then(function (resposta) {
         console.log(`Dados recebidos ==========================: ${JSON.stringify(resposta)}`);
         
-        kpi_resultado_user.innerHTML = `Seu ultimo resultado: ${resposta.resultadoNome}`
+        kpi_resultado_user.innerHTML = `<p class="indicador">Seu ultimo resultado:</p> <b class="resultado">${resposta.resultadoNome}</b>`
 
       });
     } else {

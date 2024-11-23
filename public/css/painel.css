@@ -28,6 +28,7 @@ body {
 	background-repeat: repeat-y;
 	background-color: #3e1f58;
 	gap:20px;
+	position: fixed;
   }
 
   .lateral .logo{
@@ -61,17 +62,27 @@ nav {
 
 .container-painel{
 	font-family: 'Poppins';
-	margin-left: 100px;
-	margin-top: 120px;
+	margin-left: 180px;
+	margin-top: 40px;
 	margin-right: 100px;
 	width: 80%;
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	gap:50px;
-
+	
+	padding: 5px;
+	border-radius: 10px;
 }
 
+.dash{
+	width: 900px;
+}
+
+.quiz{
+	margin-left: 318px;
+    margin-top: 70px;
+    margin-right: 123px;
+}
 
 .quiz-content{
 
@@ -129,10 +140,11 @@ h1 {
 	font-family: 'Roboto', sans-serif;
 	font-size: 38px;
 	color: #393970;
-	margin-bottom: 15px;
+	margin-bottom: 35px;
 	letter-spacing: 1.5px;
 	text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 
 .hello{
 	margin-top: 50px;
@@ -144,5 +156,30 @@ h1 {
 	display: flex;
 	flex-direction: row-reverse;
 	padding: 20px;
-	gap: 60px
+	gap: 60px;
+	margin-left: 81px;
+}
+
+
+.kpi{
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	text-align: center;
+	background-color: rgba(48, 25, 52, 1);
+	
+
+}
+
+.indicador, .resultado{
+	margin-bottom: 10px;
+	font-size:20px;
+	color:#fff
+	
+}
+
+#graficoBarra{
+	background-color: rgba(48, 25, 52, 1);
+	padding: 10px;
+	border-radius: 10px;
 }

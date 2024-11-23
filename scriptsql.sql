@@ -22,9 +22,9 @@ WHEN resultado LIKE '%Jazz%' THEN 'Tranquilo'
 WHEN resultado LIKE '%Indie%' THEN 'Criativo'
 WHEN resultado LIKE '%Rock%' THEN 'Único'
 ELSE 'Sem resultado'
-END AS resultados, count(resultado) as Quantidade
-from quiz
-group by resultado;
+END AS resultados, count(resultado) AS Quantidade
+FROM quiz
+GROUP BY resultado;
 
 SELECT count(resultado) as resultado FROM quiz;
 
