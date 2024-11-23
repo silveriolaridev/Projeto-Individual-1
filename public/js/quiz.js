@@ -17,7 +17,7 @@ const perguntas = [
     },
     {
         pergunta: "Qual desses instrumentos te atrai mais?",
-        opcoes: ["Guitarra ou bateria", "Piano ou violino", "Violão ou instrumentos folclóricos", "Sintetizadores ou algo bem moderno"],
+        opcoes: ["Guitarra ou bateria", "Piano ou violino", "Violão ou instrumentos de corda", "Sintetizadores ou algo bem moderno"],
         pontuacao: ['A', 'B', 'C', 'D']
     },
     {
@@ -32,7 +32,7 @@ const perguntas = [
     },
     {
         pergunta: "Em qual desses cenários você gostaria de estar?",
-        opcoes: ["Um festival lotado com muita música e dança", "Um concerto acústico em um teatro pequeno", "Uma roda de música ao redor de uma fogueira", "Um lounge futurista com músicas inovadoras"],
+        opcoes: ["Um festival lotado com muita música e dança", "Um concerto acústico em um teatro pequeno", "Uma roda de música ao redor de uma fogueira", "Um show com músicas inovadoras"],
         pontuacao: ['A', 'B', 'C', 'D']
     },
     {
