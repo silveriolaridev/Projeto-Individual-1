@@ -74,6 +74,15 @@ nav {
 	border-radius: 10px;
 }
 
+.button-start{
+	margin-top: 70px;
+	margin-bottom: 70px;
+}
+
+.button-start button{
+	margin-top: 40px;
+}
+
 .dash{
 	width: 900px;
 }
@@ -84,12 +93,16 @@ nav {
     margin-right: 123px;
 }
 
-.quiz-content{
+.quiz-content button{
+	margin-top: 20px;
+}
 
-	padding: 100px;
+.quiz-content{
+	padding: 80px;
 	background-color: #ffffff;
-	border-radius: 8px ;
-	width: 50%;
+	border-radius: 8px;
+	margin-top: 60px;
+	width: 70%;
 	height: 100hv;
 	align-items: center;
 	justify-content: center;
@@ -116,9 +129,9 @@ button{
 	border-radius: 20px;
 	font-size: 1rem;
 	color: #fff;
-	background: linear-gradient(135deg, #A364F1, #9e4dd4);
+	background: #9e4dd4;
 	padding: 10px;
-	width: 100%;
+	width: 70%;
 	font-weight: bold;
 	text-decoration: none;
 	box-shadow: 0 4px 15px rgba(142, 68, 173, 0.4);
@@ -130,7 +143,7 @@ button:hover {
 }
 
 .quiz-content h3{
-	margin-bottom: 20px;
+	margin-bottom: 80px;
 	font-size: 25px;
 
 }
@@ -166,20 +179,35 @@ h1 {
 	padding: 20px;
 	border-radius: 10px;
 	text-align: center;
-	background-color: rgba(48, 25, 52, 1);
-	
-
+	background-color: #783C82;
+	box-shadow: 0 4px 15px rgba(120, 60, 130, 0.3);
+	border: solid 2px #D1C4E9;
 }
 
 .indicador, .resultado{
 	margin-bottom: 10px;
 	font-size:20px;
 	color:#fff
-	
 }
 
 #graficoBarra{
-	background-color: rgba(48, 25, 52, 1);
-	padding: 10px;
+	background-color: #783C82;
+	padding: 20px;
 	border-radius: 10px;
+	box-shadow: 0 4px 15px rgba(120, 60, 130, 0.3);
+	border: solid 2px #D1C4E9;
+
+}
+
+.resultadoQuiz{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.resultadoQuiz h3{
+	margin-bottom: 20px;
+}
+
+.botoesResultadoQuiz{
+	margin-top: 50px;
 }

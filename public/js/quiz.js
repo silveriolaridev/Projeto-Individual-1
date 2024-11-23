@@ -152,7 +152,19 @@ function mostrarResultado() {
 
 
     document.getElementById('quiz-content').innerHTML = `
+    <div class="resultadoQuiz">
         <h3>Resultado</h3>
         <p>${resultado}</p>
+        <div class="botoesResultadoQuiz">
+        <button onclick="verDash()">Ir para Dashboard</button>
+         <button onclick="verEstilos()">Conhecer Estilos</button></div></div>
     `;
+}
+
+function verDash(){
+    window.location = "./dashboard.html"
+}
+
+function verEstilos(){
+    window.location = "./estilos.html"
 }
