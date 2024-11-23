@@ -37,7 +37,7 @@ body {
 	margin-top: 60px;
   }
 
-  a {
+  .lateral a {
 	text-decoration: none;
 	border-radius: 10px;
 	padding: 15px;
@@ -69,7 +69,6 @@ nav {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	
 	padding: 5px;
 	border-radius: 10px;
 }
@@ -112,7 +111,7 @@ nav {
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
-a:hover {
+.lateral a:hover {
 	border-radius: 10px;
 	background-color: white;
 	color: #8374f3;
@@ -211,3 +210,50 @@ h1 {
 .botoesResultadoQuiz{
 	margin-top: 50px;
 }
+
+.menu{
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+.menu button{
+	width: 200px;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+
+
+.estilo{
+	display: flex;
+	flex-direction: column;
+	gap:20px !important;
+	width: 850px;
+
+
+}
+
+.estilo a{
+	text-decoration: none;
+	color: #9e4dd4;
+	
+	
+}
+
+.estilo ul{
+	display: flex;
+	flex-wrap: wrap;
+	list-style-type: none;
+}
+
+.estilo ul li{
+	margin-bottom: 10px;
+	font-size: 16px; 
+  	font-weight: bold; 
+  	color: #333;
+	width: 30%;
+}
+
+.estilo ul li a:hover {
+	text-decoration: underline;
+  }

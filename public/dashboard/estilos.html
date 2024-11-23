@@ -1,11 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" href="./assets/icon/notas_musicais.png">
+    <title>SoulTune - Estilos</title>
+    <link rel="stylesheet" href="../css/painel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="../js/sessao.js"></script>
+    <script src="../js/estilos.js"></script>
+    <link rel="icon" href="./assets/icon/notas_musicais.png">
+
 </head>
-<body>
+
+<body onload="validarSessao()">
+    <div class="lateral">
+
+        <img class="logo" src="../assets/img/logo.png" alt="Soul Tune Logo">
+
+        <div class="hello">
+            <h3><span id="saudacao"></span> <span id="b_usuario">usuário</span>!</h3>
+        </div>
+
+        <nav>
+            <a href="./quiz.html"><i class="fas fa-question-circle"></i>Quiz</a>
+            <a href="./dashboard.html"><i class="fas fa-chart-bar"></i> Dashboard</a>
+            <a href="./estilos.html"><i class="fas fa-music"></i>Explorar Estilos</a>
+            <a href="../index.html" class="sair" onclick="limparSessao()"><i class="fas fa-arrow-left"></i>Sair</a>
+        </nav>
+    </div>
+
+    <div class="container-painel">
+        <div class="menu">
+            <button id="btn-energetico" class="botao-estilo"
+                onclick="mostrarEstilo('estiloEnergetico', 'btn-energetico')">Energético</button>
+            <button id="btn-tranquilo" class="botao-estilo"
+                onclick="mostrarEstilo('estiloTranquilo', 'btn-tranquilo')">Tranquilo</button>
+            <button id="btn-criativo" class="botao-estilo"
+                onclick="mostrarEstilo('estiloCriativo', 'btn-criativo')">Criativo</button>
+            <button id="btn-unico" class="botao-estilo"
+                onclick="mostrarEstilo('estiloUnico', 'btn-unico')">Único</button>
+        </div>
+    
+        <div id="conteudoEstilo" class="conteudoEstilo">
+            <div id="estiloEnergetico" class="estilo">
+                <h2>Energético</h2>
+               
+                <p><b>Se você se encaixou no estilo Energético…</b> Você é pura energia! Sempre pronta para agitar, você adora estar no centro das atenções e não perde uma oportunidade de brilhar. Extrovertida e super motivada, seu sorriso é contagiante e sua disposição é invejável. 
+                Para você, a vida é uma festa e sempre há algo novo para explorar. Nunca fica parada e está sempre pronta para a próxima aventura – seus amigos adoram isso em você!</p>
+                <h3>Cantores Representativos:</h3>
+                <ul>
+                    <li><a href="https://music.youtube.com/channel/UCPC0L1d253x-KuMNwa05TpA">Taylor Swift</a></li>
+                    <li><a href="https://music.youtube.com/channel/UCoPQ_TWm8JZ5nJv4a5BzSWA">Beyoncé</a></li>
+                    <li><a href="https://music.youtube.com/channel/UC9vrvNSL3xcWGSkV86REBSg">BTS</a></li>
+                </ul>
+                <ul>
+                    <li><a href="https://music.youtube.com/channel/UCkbbMCA40i18i7UdjayMPAg">Black Pink</a></li>
+                    <li><a href="hhttps://music.youtube.com/channel/UCI99G32byWj1aH13pbxnTEw">Anitta</a></li>
+                    <li><a href="https://music.youtube.com/channel/UCuACQmW04T3v9Mz_1_suFYw">Avicii</a></li>
+                </ul>
+                <ul>
+                    <li><a href="https://music.youtube.com/channel/UCh-4c1ZoBPNP1C8c-7iVvUQ">David Guetta</a></li>
+                    <li><a href="https://music.youtube.com/channel/UCAq0pFGa2w9SjxOq0ZxKVIw">TWICE</a></li>
+                    <li><a href="https://music.youtube.com/channel/UCrxpwXq8wCTskOQq5d_KoqQ">Marshmello</a></li>
+                </ul>
+                <h3>Playlist no YouTube Music:</h3>
+                <a href="https://spotify.link/playlist1">Ouça a Playlist</a>
+            </div>
+    
+            <div id="estiloTranquilo" class="estilo" style="display: none;">
+                <h2>Tranquilo</h2>
+                <p><b>Se seu estilo é Tranquilo…</b> Você é a paz em meio ao caos. Calmo e centrado, prefere um ritmo mais leve e tranquilo, sem pressa. Gosta de desacelerar e aproveitar os pequenos momentos da vida. 
+                    Seu equilíbrio e serenidade fazem de você uma pessoa confiável, que sempre traz calma e harmonia aos outros. Você sabe que menos é mais e vive de forma simples, mas cheia de significado.</p>
+                <h3>Cantores Representativos:</h3>
+                <ul>
+                    <li><a href="https://music.youtube.com/channel/UClmXPfaYhXOYsNn_QUyheWQ">Ed Sheeran</a></li>
+                    <li><a href="https://music.youtube.com/channel/UCi5v9JwQUi6l4Qf2flIYhQw">Billie Eilish</a></li>
+                    <li><a href="https://music.youtube.com/channel/UCDARE-4OotSQ2uHFla-zNvA">AnaVitória</a></li>
+                </ul>
+                <ul>
+                    <li><a href="https://music.youtube.com/channel/UCXi-Rme73-wjVK5IE78a3SQ">Joji</a></li>
+                    <li><a href="https://music.youtube.com/channel/UC5sOhxfts379lOCXaIAinyw">Sufjan Stevens</a></li>
+                    <li><a href="https://music.youtube.com/channel/UChC2OO1dG5Vge1Kuc-1QZRg">Clairo</a></li>
+                </ul>
+                <ul>
+                    <li><a href="https://music.youtube.com/channel/UCyqq-aiu3vEHuf5NhwmOJcw">Lana Del Rey</a></li>
+                    <li><a href="https://music.youtube.com/channel/UCs95LJSHhdVhYQLvqsZqp_A">Mac DeMarco</a></li>
+                    <li><a href="https://music.youtube.com/channel/UCnsAooIr-Dsr8zJOCSadQcA">Beethoven</a></li>
+                </ul>
+                
+                <h3>Playlist no YouTube Music:</h3>
+                <a href="https://spotify.link/playlist1">Ouça a Playlist</a>
+            </div>
+    
+            <div id="estiloCriativo" class="estilo" style="display: none;">
+                <h2>Criativo</h2>
+                <p><b>Se você é do tipo Criativo…</b> A sua mente nunca para de criar! Original e cheio de ideias inovadoras, você adora transformar o comum em algo especial. Seu estilo é único, sempre buscando algo novo e ousado. Não tem medo de experimentar e está sempre à frente do seu tempo. 
+                    Seus amigos adoram suas ideias fora da caixa e sabem que você sempre tem algo novo e diferente para compartilhar.</p>
+                <h3>Cantores Representativos:</h3>
+                <ul>
+                    <li><a href="https://music.youtube.com/channel/UCnJc42YfR1aMn50KgX1GeYg">Pitty</a></li>
+                    <li><a href="https://music.youtube.com/channel/UCZWoiDh4WWcAzPFRZL9QsGA">Cuco</a></li>
+                    <li><a href="https://music.youtube.com/channel/UCgqSlB91jGqWkuym-oNeG9g">Rag'n'Bone Man</a></li>
+                </ul>
+                <ul>
+                    <li><a href="https://music.youtube.com/channel/UCA3Zs9A2IeetfGT3Omi9ivw">Hozier</a></li>
+                    <li><a href="https://music.youtube.com/channel/UCzrIiAc8RMd6kguvJA_yLmw">Jão</a></li>
+                    <li><a href="https://music.youtube.com/channel/UCqqY2nAz23oGDMNdiDzKdsA">Mitski</a></li>
+                </ul>
+                <ul>
+                    <li><a href="https://music.youtube.com/channel/UCo7VN5w1PpeBOapTqtal75Q">Caetano Veloso</a></li>
+                    <li><a href="https://music.youtube.com/channel/UC3mgK-SgaPOBGQXxdf8DCAQ">Melanie Martinez</a></li>
+                    <li><a href="https://music.youtube.com/channel/UCMimXofNZwdbJtoxU_939Iw">MARINA</a></li>
+                </ul>
+                <h3>Playlist no YouTube Music:</h3>
+                <a href="https://spotify.link/playlist1">Ouça a Playlist</a>
+            </div>
+    
+            <div id="estiloUnico" class="estilo" style="display: none;">
+                <h2>Único</h2>
+                <p><b>Se o seu resultado foi Único…</b> Você é aquele que não segue regras – cria as suas próprias! Autêntico e cheio de personalidade, não tem medo de ser quem realmente é. Seu estilo é só seu e você se destaca onde quer que vá. 
+                Não se importa com a opinião dos outros e se orgulha de ser diferente. Para você, ser original é o que importa, e é isso que torna sua presença tão marcante e especial.</p>
+                <h3>Cantores Representativos:</h3>
+                <ul>
+                    <li><a href="https://music.youtube.com/channel/UCZn4r7heNOPY-C43YIywnVA">Bruno Mars</a></li>
+                    <li><a href="https://music.youtube.com/channel/UCZMGX8S2AfpQ5BTTgKhuMzA">Arctic Monkeys</a></li>
+                    <li><a href="https://music.youtube.com/channel/UC8AjfH2Gxo3RroT4AtsNPMQ">Florence + The Machine</a></li>
+                </ul>
+                <ul>
+                    <li><a href="https://music.youtube.com/channel/UCyJjbgcGgYtvRlQj6pZRxlw">Tame Impala</a></li>
+                    <li><a href="https://music.youtube.com/channel/UCE5XNpliPM-SmyFEp61tL_g">Olivia Rodrigo</a></li>
+                    <li><a href="https://music.youtube.com/channel/UCzfcZrX9pZ13z3eWVtP7zqw">The Weeknd</a></li>
+                </ul>
+                <ul>
+                    <li><a href="https://music.youtube.com/channel/UCm6KPKVXb85-FXyA2Bhp0Xg">Panic! At The Disco</a></li>
+                    <li><a href="https://music.youtube.com/channel/UCk0bB0iK_V3Vzybt2fB7oJg">Linkin Park</a></li>
+                    <li><a href="https://music.youtube.com/channel/UC9c0aOW3fhTjckXbffNxGRA">System Of a Down</a></li>
+                </ul>
+                
+                <h3>Playlist no YouTube Music:</h3>
+                <a href="https://spotify.link/playlist1">Ouça a Playlist</a>
+            </div>
+        </div>
+    </div>
     
 </body>
+
 </html>
