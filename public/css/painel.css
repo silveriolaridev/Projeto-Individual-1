@@ -98,14 +98,14 @@ nav {
 }
 
 .dash{
-	width: 900px;
+	width: 1000px;
 }
 
 
 
 .quiz-content button{
 	margin-top: 20px;
-	width: 80%;
+	width: 60%;
 }
 
 .button-start button{
@@ -184,23 +184,40 @@ h1 {
 
 .kpis{
 	display: flex;
+	align-items: center;
+	justify-content: center;
 	flex-direction: row-reverse;
 	padding: 20px;
-	gap: 60px;
-	
+	gap: 40px;
 }
 
-
-.kpi{
-	background-color: #fff;
-	padding: 20px;
-	border-radius: 10px;
+.kpi {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
-	background-color: #783C82;
+	color: #fff;
+	background-color:  #783C82 ;
+	padding: 15px;
+	border-radius: 10px;
 	box-shadow: 0 4px 15px rgba(120, 60, 130, 0.3);
 	border: solid 2px #D1C4E9;
-}
-
+  }
+  
+  .kpi i {
+	margin-right: 5px;;
+	margin-bottom: 10px;
+	border-radius: 100%;
+	width: 1.7rem;
+	align-items: center;
+	background-color: #3e1f58;
+    padding: 0.6rem;
+    border-radius: 95%;
+    color: #ffff;
+    font-size: 1.7rem;
+  }
+  
 .indicador, .resultado{
 	margin-bottom: 10px;
 	font-size:20px;
@@ -208,11 +225,12 @@ h1 {
 }
 
 .indicador{
+	padding-bottom: 0.5rem;
 	border-bottom: 1px solid #fff;
 }
 
 #graficoBarra{
-	background-color: #783C82;
+	background-color: #3e1f58;
 	padding: 20px;
 	border-radius: 10px;
 	box-shadow: 0 4px 15px rgba(120, 60, 130, 0.3);
@@ -344,3 +362,6 @@ h1 {
 .container-painel .menu, .container-painel .estilo{
 	margin-left: 4rem;
 }
+
+
+ 

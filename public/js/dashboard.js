@@ -157,7 +157,7 @@ function kpiQuantidadeResultadosNoPainel() {
         response.json().then(function (resposta) {
           console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
 
-          kpi_qtd.innerHTML = `<p class="indicador">Total de resultados</p> <b class="resultado">${resposta.resultado}</b>`
+          kpi_qtd.innerHTML = `<p class="indicador"><i class="fa-solid fa-file-alt"></i> Total de resultados</p> <b class="resultado">${resposta.resultado}</b>`
 
         });
       } else {
@@ -176,7 +176,7 @@ function kpiMaiorIndiceNoPainel() {
         response.json().then(function (resposta) {
           console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
 
-          kpi_maior.innerHTML = `<p class="indicador">Estilo com mais resultados</p> <b class="resultado">${resposta.resultadoNome}</b>`
+          kpi_maior.innerHTML = `<p class="indicador"><i class="fa-solid fa-percent"></i>Estilo com mais resultados</p> <b class="resultado">${resposta.resultadoNome}</b>`
 
         });
       } else {
@@ -196,7 +196,7 @@ function kpiUltimoResultadoNoPainel() {
         response.json().then(function (resposta) {
           console.log(`Dados recebidos ==========================: ${JSON.stringify(resposta)}`);
 
-          kpi_resultado_user.innerHTML = `<p class="indicador">Seu último resultado</p> <b class="resultado">${resposta.resultadoNome}</b>`
+          kpi_resultado_user.innerHTML = `<p class="indicador"><i class="fa-solid fa-clock"></i>Seu último resultado</p> <b class="resultado">${resposta.resultadoNome}</b>`
 
         });
       } else {
