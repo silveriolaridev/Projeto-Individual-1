@@ -13,6 +13,7 @@
     <title>SoulTune - Dashboard</title>
 </head>
 <body onload="validarSessao(), obterDados(), kpiQuantidadeResultadosNoPainel(), kpiMaiorIndiceNoPainel(), kpiUltimoResultadoNoPainel()">
+    
     <div  class="lateral">
 
         <img class="logo" src="../assets/img/logo.png" alt="Soul Tune Logo">
@@ -27,13 +28,13 @@
             <a href="../index.html" class="sair" onclick="limparSessao()"><i class="fas fa-arrow-left"></i>Sair</a>
         </nav>
         </div>
-        <div class="container-painel">
+        <div class="container-dash">
 
         <div class="kpis">
         <div id="kpi_qtd" class="kpi">Resultados</div>
         <div id="kpi_maior" class="kpi">Resultado Nome</div>
         <div id="kpi_resultado_user" class="kpi"> Resultado usuario</div></div>
-        <div  class="container-painel dash" >
+        <div  class="dash" >
             <canvas id="graficoBarra"></canvas>
         </div></div>
 </body>

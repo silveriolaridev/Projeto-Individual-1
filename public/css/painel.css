@@ -7,13 +7,18 @@
 	padding: 0;
 }
 
+html{
+	height: 100%;
+	width: 100%;
+}
+
 body {
 	background-image: url("../assets/img/backgroud.png");
 	background-size: cover;
 	font-family: 'Roboto', sans-serif;
 	margin: 0;
 	padding: 0;
-	min-height: 100vh;
+	min-height: 100%;
 	transition: all 3s ease-in-out;
 	display: flex;
 	flex-direction: row;
@@ -21,14 +26,15 @@ body {
 
 .lateral {
 	display: flex;
-	align-items: center;
-	flex-direction: column;
-	width: 15%;
-	height: 100vh;
-	background-repeat: repeat-y;
-	background-color: #3e1f58;
-	gap:20px;
-	position: fixed;
+    align-items: center;
+    flex-direction: column;
+    width: 15%;
+    height: 100%;
+    background-repeat: repeat-y;
+    background-color: #3e1f58;
+    gap: 20px;
+    position: fixed;
+    
   }
 
   .lateral .logo{
@@ -39,14 +45,15 @@ body {
 
   .lateral a {
 	text-decoration: none;
-	border-radius: 10px;
-	padding: 15px;
-	align-items: center;
-	color: white;
-	font-size: 20px;
-	display: flex;
-	gap:10px;
-	transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+    padding: 15px;
+    align-items: center;
+    color: white;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
 }
 
 nav {
@@ -62,15 +69,27 @@ nav {
 
 .container-painel{
 	font-family: 'Poppins';
-	margin-left: 180px;
-	margin-top: 40px;
-	margin-right: 100px;
-	width: 80%;
+	margin-left: 15rem;
+	width: 85%;
 	align-items: center;
 	display: flex;
 	flex-direction: column;
 	padding: 5px;
 	border-radius: 10px;
+	justify-content: center;
+
+}
+
+.container-dash{
+	font-family: 'Poppins';
+	margin-left: 15rem;
+	width: 85%;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	padding: 5px;
+	border-radius: 10px;
+	justify-content: center;
 }
 
 .button-start{
@@ -82,11 +101,7 @@ nav {
 	width: 900px;
 }
 
-.quiz{
-	margin-left: 318px;
-    margin-top: 70px;
-    margin-right: 123px;
-}
+
 
 .quiz-content button{
 	margin-top: 20px;
@@ -103,10 +118,9 @@ nav {
 
 .quiz-content{
 	padding: 80px;
-	background-color: #ffffff;
+	background-color:rgba(245, 245, 245, 1);
 	border-radius: 8px;
-	margin-top: 60px;
-	width: 70%;
+	width: 65%;
 	height: 100hv;
 	align-items: center;
 	justify-content: center;
@@ -123,7 +137,7 @@ nav {
 }
 
 .sair{
-	margin-top: 100px;
+	margin-top: 40%;
 }
 
 button{
@@ -173,7 +187,7 @@ h1 {
 	flex-direction: row-reverse;
 	padding: 20px;
 	gap: 60px;
-	margin-left: 81px;
+	
 }
 
 
@@ -211,6 +225,12 @@ h1 {
 	margin-bottom: 15px;
 }
 
+.numeroAtual{
+	display: flex;
+	justify-content: end;
+	font-size: 22px;
+}
+
 .resultadoQuiz h3{
 	margin-bottom: 20px;
 }
@@ -222,31 +242,43 @@ h1 {
 
 .menu{
 	display: flex;
+	align-items: center;
 	flex-direction: row;
-	gap: 20px;
+	justify-content: space-evenly;
+	width: 80%;
+
+}
+
+.conteudoEstilo{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 90%;
 }
 
 .menu button{
-	width: 200px;
-	margin-bottom: 50px;
-	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	width: 15rem;
+	margin-bottom: 2rem;
 }
 
 
 .estilo{
 	display: flex;
 	flex-direction: column;
-	gap:30px !important;
-	width: 850px;
-
-
+	gap:2rem ;
+	width: 75%;
+	border-radius: 10px;
+	justify-content: center;
+	
 }
 
 .estilo a{
 	text-decoration: none;
 	color: #9e4dd4;
 	font-weight: bold;
-	
 }
 
 .estilo ul{
@@ -267,4 +299,48 @@ h1 {
 
 .estilo p{
 	text-align: justify;
+}
+
+.estiloEnergetico, .estiloTranquilo, .estiloUnico, .estiloCriativo{
+	padding: 10px;
+	border-radius: 10px; 
+	background-color: rgba(245, 245, 245, 1);
+	padding: 30px;
+}
+
+.estiloEnergetico{
+	border: solid 2px rgba(176, 48, 96, 0.3);
+}
+
+.estiloCriativo {
+    border: solid 2px rgba(46, 139, 87, 0.3); 
+}
+
+.estiloTranquilo {
+    border: solid 2px rgba(70, 130, 180, 0.3); 
+}
+
+.estiloUnico {
+    border: solid 2px rgba(184, 134, 11, 0.3); 
+}
+
+.estiloEnergetico a, .estiloEnergetico b {
+	color: #B03060; 
+	
+  }
+  
+  .estiloCriativo a, .estiloCriativo b {
+	color: #2E8B57; 
+  }
+  
+  .estiloTranquilo a, .estiloTranquilo b {
+	color: #4682B4; 
+  }
+  
+  .estiloUnico a, .estiloUnico b {
+	color: #B8860B; 
+  }
+  
+.container-painel .menu, .container-painel .estilo{
+	margin-left: 4rem;
 }

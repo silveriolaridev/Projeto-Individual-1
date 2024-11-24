@@ -5,7 +5,7 @@ function mostrarEstilo(estiloId, botaoId ) {
     for (var i = 0; i < estilos.length; i++) {
       estilos[i].style.display = 'none';
     }
-    
+
     document.getElementById(estiloId).style.display = 'flex';
 
     let botoes = document.getElementsByClassName('botao-estilo');

@@ -86,6 +86,7 @@ function mostrarPergunta() {
         }
 
         document.getElementById('quiz-content').innerHTML = `
+        <div class="numeroAtual"> ${indicePerguntaAtual + 1}/10</div>
             <h3>${perguntaAtual.pergunta}</h3>
             <div>
                 ${opcoesAtuais}
