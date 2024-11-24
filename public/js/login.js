@@ -46,7 +46,9 @@ function entrar() {
             });
 
         } else {
-
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML =
+        "E-mail ou senha errados";
             console.log("Houve um erro ao tentar realizar o login!");
 
             resposta.text().then(texto => {

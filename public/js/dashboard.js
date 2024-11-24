@@ -31,8 +31,8 @@ function plotarGrafico(resposta) {
       {
         label: 'Energético',
         data: [],
-        backgroundColor: 'rgba(208, 94, 168, 0.8)', 
-        borderColor: 'rgba(208, 94, 168, 1)',
+        backgroundColor: 'rgba(102, 204, 178, 0.8)', 
+        borderColor: 'rgba(102, 204, 178, 1)',
         borderWidth: 1
       },
       {
@@ -45,15 +45,15 @@ function plotarGrafico(resposta) {
       {
         label: 'Criativo',
         data: [],
-        backgroundColor: 'rgba(102, 204, 178, 0.8)', 
-        borderColor: 'rgba(102, 204, 178, 1)',
+        backgroundColor: 'rgba(155, 102, 204, 0.8)',
+        borderColor: 'rgba(155, 102, 204, 1)', 
         borderWidth: 1
       },
       {
         label: 'Único',
         data: [],
-        backgroundColor: 'rgba(255, 223, 128, 0.8)', 
-        borderColor: 'rgba(255, 223, 128, 1)', 
+        backgroundColor: 'rgba(208, 94, 168, 0.8)', 
+        borderColor: 'rgba(208, 94, 168, 1)',
         borderWidth: 1
         
       }

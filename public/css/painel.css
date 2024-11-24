@@ -225,7 +225,7 @@ h1 {
 }
 
 .indicador{
-	padding-bottom: 0.5rem;
+	padding-bottom: 3px;
 	border-bottom: 1px solid #fff;
 }
 
@@ -278,9 +278,10 @@ h1 {
 .menu button{
 	display: flex;
 	justify-content: center;
-	width: 15rem;
+	width: 13rem;
 	margin-bottom: 2rem;
 }
+
 
 
 .estilo{
@@ -315,6 +316,8 @@ h1 {
 	text-decoration: underline;
   }
 
+
+
 .estilo p{
 	text-align: justify;
 }
@@ -327,11 +330,14 @@ h1 {
 }
 
 .estiloEnergetico{
-	border: solid 2px rgba(176, 48, 96, 0.3);
+	border: solid 2px rgba(46, 139, 87, 0.3); 
+
 }
 
+
+
 .estiloCriativo {
-    border: solid 2px rgba(46, 139, 87, 0.3); 
+	border: 2px solid rgba(120, 60, 130, 0.3);
 }
 
 .estiloTranquilo {
@@ -339,16 +345,16 @@ h1 {
 }
 
 .estiloUnico {
-    border: solid 2px rgba(184, 134, 11, 0.3); 
+	border: solid 2px rgba(176, 48, 96, 0.3);
 }
 
 .estiloEnergetico a, .estiloEnergetico b {
-	color: #B03060; 
+	color: #2E8B57; 
 	
   }
   
   .estiloCriativo a, .estiloCriativo b {
-	color: #2E8B57; 
+	color: #9e4dd4
   }
   
   .estiloTranquilo a, .estiloTranquilo b {
@@ -356,7 +362,7 @@ h1 {
   }
   
   .estiloUnico a, .estiloUnico b {
-	color: #B8860B; 
+	color: #B03060; 
   }
   
 .container-painel .menu, .container-painel .estilo{

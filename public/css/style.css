@@ -16,7 +16,7 @@ header {
 	z-index: 10;
 	background-color: #3e1f58;
 	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
-	padding: 1.5rem;
+	padding: 0.4rem;
 	font-weight: bold;
 
 }
@@ -44,7 +44,7 @@ body {
 	padding: 10px;
 }
 
-a {
+header a {
 	text-decoration: none;
 	padding: 15px;
 	align-items: center;
@@ -52,7 +52,7 @@ a {
 	transition: color 0.3s ease;
 }
 
-a:hover {
+header a:hover {
 	color: #e4c2f1;
 }
 
@@ -71,10 +71,33 @@ footer {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
+	flex-direction: column;
+	gap: 15px;
 }
 
 footer span {
 	font-size: 12px;
+}
+
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-links a {
+    color: #000; 
+    text-decoration: none; 
+}
+
+.social-links a:hover {
+    color: #3e1f58 
+}
+
+.social-links i {
+	font-size: 1.3rem; 
+    margin-right: 5px; 
 }
 
 
@@ -91,12 +114,18 @@ body {
 	padding: 1.5rem;
 }
 
-a {
+header a {
 	text-decoration: none;
 	padding: 15px;
 	align-items: center;
 	color: white;
 	transition: color 0.3s ease;
+}
+
+footer a {
+	text-decoration: none;
+	transition: color 0.3s ease;
+	color: black
 }
 
 
@@ -202,6 +231,7 @@ section {
 	left: 10px;
 	color: #4a4a8f;
 	font-size: 1.2em;
+	transform: translateY(20%); 
 }
 
 .input-container input::placeholder{
