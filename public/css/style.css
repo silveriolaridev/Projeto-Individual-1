@@ -278,6 +278,12 @@ section h1 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.titulo-sobre{
+	text-align: center;
+	font-size: 3rem;
+	padding-top: 15px;
+}
+
 h1 {
 	font-family: 'Roboto', sans-serif;
 	font-size: 80px;

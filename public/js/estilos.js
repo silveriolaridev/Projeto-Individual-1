@@ -14,6 +14,6 @@ function mostrarEstilo(estiloId, botaoId ) {
       botoes[i].style.border = 'none';
     }
 
-    document.getElementById(botaoId).style.border = 'solid 2px white';
+    document.getElementById(botaoId).style.border = 'solid 4px white';
   }
   

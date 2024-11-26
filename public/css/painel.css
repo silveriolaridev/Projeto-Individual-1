@@ -207,7 +207,7 @@ h1 {
   }
 
   .kpi:hover{
-	border: solid 2px #d7a0d7; 
+	border: solid 4px #d7a0d7; 
   }
   
   .kpi i {
@@ -245,7 +245,7 @@ h1 {
 }
 
 #graficoBarra:hover{
-	border: solid 2px #d7a0d7; 
+	border: solid 4px #d7a0d7; 
 
 }
 
